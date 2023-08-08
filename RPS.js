@@ -16,6 +16,11 @@ return [rock,paper,gunting] [modes]
 let result= random()
 
 const logic = () =>{
-  if(rock===true && gunting===false )
-  console.log("You Win")
+  if(rock==="rock" && gunting==="gunting"){
+  console.log("Rock Wins!!!")
+}else if(gunting==="gunting" && paper==="paper" ){
+console.log("Gunting wins!!!")
+}else if(paper==="paper" && rock==="rock"){
+  console.log("Paper wins!!!")
+}
 }

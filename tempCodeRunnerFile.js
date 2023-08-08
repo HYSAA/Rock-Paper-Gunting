@@ -1,16 +1,24 @@
-let rock="rock"
-let paper="paper"
-let gunting="gunting"
+let rock
+let paper
+let gunting
 
 
-// function startGame(){
+ function startGame(){
+ 
 
-
-// }
+ }
 const random = () =>{
 let modes= Math.floor(Math.random()*3)+1
 return [rock,paper,gunting] [modes]
 }
 let result= random()
 
-console.log(result)
+const logic = () =>{
+  if(rock==="rock" && gunting==="gunting"){
+  console.log("Rock Wins!!!")
+}else if(gunting==="gunting" && paper==="paper" ){
+console.log("Gunting wins!!!")
+}else if(paper==="paper" && rock==="rock"){
+  console.log("Paper wins!!!")
+}
+}
