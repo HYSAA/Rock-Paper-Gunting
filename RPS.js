@@ -1,8 +1,8 @@
 let btn= document.getElementById("button-el")
 let screen= document.getElementById("element-El")
-let rock="rock"
-let paper="paper"
-let gunting="gunting"
+let rock
+let paper
+let gunting
 
 
  function startGame(){
