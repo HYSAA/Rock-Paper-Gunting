@@ -77,7 +77,7 @@ let screen = document.getElementById("element-El");
 let playerscreen=document.getElementById("elements-El")
 
 // const cards = {rock: "✊", paper: "🤚", scissors: "✌"};
-let cards=["rock","paper","scissors"]
+let cards=["✊","🤚","✌"]
 console.log(cards.rock);
 
 function startGame() {
@@ -106,11 +106,11 @@ const logic = () => {
   let player = cards[Math.floor(Math.random() * 3)];
   let computer = cards[Math.floor(Math.random() * 3)];
 
-  if (player === "rock" && computer === "scissors") {
+  if (player === "✊" && computer === "✌") {
     return("Rock Wins!!!");
-  } else if (player === "scissors" && computer === "paper") {
+  } else if (player === "✌" && computer === "🤚") {
     return("Scissors Wins!!!");
-  } else if (player === "paper" && computer === "rock") {
+  } else if (player === "🤚" && computer === "✊") {
     return("Paper Wins!!!");
   }
   else{
