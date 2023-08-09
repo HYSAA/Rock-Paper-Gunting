@@ -74,13 +74,15 @@
 // }
 let btn = document.getElementById("button-el");
 let screen = document.getElementById("element-El");
+let playerscreen=document.getElementById("elements-El")
 
-const cards = {rock: "✊", paper: "🤚", scissors: "✌"};
-
+// const cards = {rock: "✊", paper: "🤚", scissors: "✌"};
+let cards=["rock","paper","scissors"]
 console.log(cards.rock);
 
 function startGame() {
   // do something
+
 }
 
 const random = () => {
@@ -93,9 +95,10 @@ const random = () => {
   });
 };
 
-screen.addEventListener("click", function () {
+btn.addEventListener("click", function () {
   let result = random();
-  screen.textContent = result[0] + " VS " + result[1];
+  screen.innerText = result[0] + " VS " + result[1]+ "\n "+logic();
+
 });
 
 
@@ -104,11 +107,14 @@ const logic = () => {
   let computer = cards[Math.floor(Math.random() * 3)];
 
   if (player === "rock" && computer === "scissors") {
-    console.log("Rock Wins!!!");
+    return("Rock Wins!!!");
   } else if (player === "scissors" && computer === "paper") {
-    console.log("Scissors Wins!!!");
+    return("Scissors Wins!!!");
   } else if (player === "paper" && computer === "rock") {
-    console.log("Paper Wins!!!");
+    return("Paper Wins!!!");
+  }
+  else{
+    return ("Draw Game!!!");
   }
 };
 
